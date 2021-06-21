@@ -1,0 +1,35 @@
+[head3]How to add Spacing between lower and upper case characters with C#[/head3]   
+[p]To to add Spacing between lower and upper case characters i first loop though the string and get all upper case characters and add them to 
+a list if the upper case character does not follow an upper character eg : ABCdef will out put ABC def.[/p]
+[ln(8)]
+
+[head3]How to Split a String with another String with C#[/head3]   
+[p]To  split a string with another string simply use the split method and pass in a new string array with the string to split.[/p]
+[ln(73)]
+
+
+[head3]How to get split a String in to individual lines with C#[/head3]   
+[p]To get individual lines from a string first replace all carriage returns with /r with an empty string or "" then split the string with \n or Environment.NewLine and this will return
+an array for each line. [/p]
+[ln(61)]
+
+
+
+[head3]How to file size as a readable string with C#[/head3]   
+[p]To get the file size first use FileInfo and give it the file path then get the length this will return as a long.
+then pass the long to the method BytesToString and this will return a readable string.[/p]
+[ln(51)]
+
+[p]eg :<br>
+1 <sup>B</sup> Bytes<br>
+1 <sup>KB</sup> Kilobyte<br>
+1 <sup>MB</sup> Megabyte<br> 
+1 <sup>GB</sup> Gigabyte<br>
+1 <sup>TB</sup> Terabyte<br>
+1 <sup>PB</sup> Petabyte<br>
+1 <sup>EB</sup> Exabyte<br> 
+[/p]
+
+[head3]How to reverse a string with C#[/head3]   
+[p]To reverse a string it is rather simple. Just use the methods ToCharArray then Reverse then finally ToArray(). [/p]
+[ln(71)]

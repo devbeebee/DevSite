@@ -1,0 +1,10 @@
+[head3]How to get Vehicle Speed in KPH Unity3D with C#[/head3]   
+[p]
+To get the speed in kilometers per hour get the attached rigidbody velocity magnitude then multiply by 3.6 
+[/p]
+[ln(247)]
+[head3]How to get Vehicle Speed in MPH Unity3D with C#[/head3]   
+[p]
+To get the speed in miles per hour first get the speed in kilometers per hour then for an approximate result, divide the value by 1.609.
+[/p]
+[ln(248)]

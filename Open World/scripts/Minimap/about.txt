@@ -1,0 +1,10 @@
+[head3]How to make a circular minimap in  Unity3D[/head3]   
+
+[p]
+To make a circluar minimap first create a UI Image object and on the inspector add a mask component and a circle texture as the sourse image. 
+Now create a UI Raw Image and make it a child of the Image. With the first two steps done in the project area create a new RenderTexture. Now in the scene make a new Camera
+and with the camera selected on the inspector drag the RenderTexture you just created and place it in the Target Texture slot and the final step select the Raw image and drag
+the RenderTexture into the Texture slot as soon as you do this the Raw Image should update to show the camera with the RenderTexture view.
+[/p]
+
+[ln(56)]

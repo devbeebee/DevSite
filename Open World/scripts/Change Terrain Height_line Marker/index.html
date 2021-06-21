@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title id="seotitle">Unity3D Open World Project -DevBeeBee</title>
+    <meta id="seokeys" name="keywords" content="Unity3D, Open World, Project">
+    <meta id="seodescription" name="description" content="">
+    <meta name=”robots” content="index, follow">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <link id="codeCSS" rel="stylesheet" href="/css/hybrid.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/my.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="/js/jszip.js"></script>
+    <script type="text/javascript" src="/js/jQuery.js"></script>
+    <script type="text/javascript" src="/js/savecs.js"></script>
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9754975194862641" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122930112-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122930112-1');
+    </script>
+    <style>
+        #spoilern {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+
+        #spoilerbtnn {
+            -webkit-text-size-adjust: 100%;
+            box-sizing: inherit;
+            font: inherit;
+
+            text-transform: none;
+            -webkit-appearance: button;
+            color: #fff !important;
+            background-color: #616161 !important;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            vertical-align: middle;
+            overflow: hidden;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;
+            user-select: none;
+            box-shadow: none;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        pre {
+            width: 90%;
+            margin: 20px;
+            margin-left: 5%;
+            margin-top: 4px;
+            /* margin: -20px; */
+        }
+
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+        .content {
+            display: none;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body class="w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-animate-left" style="background-color: #0b0b0b; z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+
+            <h4><b>DevBeeBee</b></h4>
+            <p class="w3-text-grey">A Place for all the thing's i have learned around coding.</p>
+        </div>
+        <div class="w3-bar-block">
+            <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+                <i class="fa fa-th-large fa-fw w3-margin-right"></i>Home
+            </a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding myNav">
+                <i class="fa fa-user fa-fw w3-margin-right"></i>C# & Unity
+            </a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding myNav">
+                <i class="fa fa-user fa-fw w3-margin-right"></i>HTML JS CSS
+            </a>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="devbeebee" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff"
+                data-coffee-color="#FFDD00"></script>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header id="portfolio">
+
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </span>
+            <div class="w3-container">
+                <h1 id="pagename" style="text-align: center;"><b>Change Terrain Height_line Marker</b></h1>
+            </div>
+        </header>
+        
+        <h1>TITLE</h1>
+        <div id="mainscript">
+            <h4 style="text-align: center;" id="mainscriptname">ChangeTerrainHeight_lineMarker.cs <sup >5.6KB</sup></h4>
+            <p style='text-align:center;'></p>
+            <button class='center'onclick='create_zip()'>Download Files 5.6KB</button><br>
+            <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using UnityEngine;
+
+public class ChangeTerrainHeight_lineMarker : MonoBehaviour
+{
+
+    public Terrain TerrainMain;
+    public LineRenderer line;
+
+    void OnGUI()
+    {
+        TerrainData terrainData = TerrainMain.terrainData;
+        int xRes = terrainData.heightmapResolution;
+        int yRes = terrainData.heightmapResolution;
+
+        //GetHeights - gets the heightmap points of the tarrain. Store them in array
+        float[,] heights = TerrainMain.terrainData.GetHeights(0, 0, xRes, yRes);
+
+        //Trigger line area raiser
+        if (GUI.Button(new Rect(30, 30, 200, 30), &quot;Line fill&quot;))
+        {
+            /* Set the positions to array &quot;positions&quot; */
+            Vector3[] positions = new Vector3[line.positionCount];
+            line.GetPositions(positions);
+
+            float height = 0.10f; // define the height of the affected verteces of the terrain
+
+            /* Find the reactangle the shape is in! The sides of the rectangle are based on the most-top, -right, -bottom and -left vertex. */
+            float ftop = float.NegativeInfinity;
+            float fright = float.NegativeInfinity;
+            float fbottom = Mathf.Infinity;
+            float fleft = Mathf.Infinity;
+            for (int i = 0; i &lt; line.positionCount; i++)
+            {
+                //find the outmost points
+                if (ftop &lt; positions[i].z)
+                {
+                    ftop = positions[i].z;
+                }
+                if (fright &lt; positions[i].x)
+                {
+                    fright = positions[i].x;
+                }
+                if (fbottom &gt; positions[i].z)
+                {
+                    fbottom = positions[i].z;
+                }
+                if (fleft &gt; positions[i].x)
+                {
+                    fleft = positions[i].x;
+                }
+            }
+            int top = Mathf.RoundToInt(ftop);
+            int right = Mathf.RoundToInt(fright);
+            int bottom = Mathf.RoundToInt(fbottom);
+            int left = Mathf.RoundToInt(fleft);
+
+            int terrainXmax = right - left; // the rightmost edge of the terrain
+            int terrainZmax = top - bottom; // the topmost edge of the terrain 
+
+            float[,] shapeHeights = TerrainMain.terrainData.GetHeights(left, bottom, terrainXmax, terrainZmax);
+
+            Vector2 point; //Create a point Vector2 point to match the shape
+
+            /* Loop through all points in the rectangle surrounding the shape */
+            for (int i = 0; i &lt; terrainZmax; i++)
+            {
+                point.y = i + bottom; //Add off set to the element so it matches the position of the line
+                for (int j = 0; j &lt; terrainXmax; j++)
+                {
+                    point.x = j + left; //Add off set to the element so it matches the position of the line
+                    if (InsidePolygon(point, bottom))
+                    {
+                        shapeHeights[i, j] = height; // set the height value to the terrain vertex
+                    }
+                }
+            }
+
+            //SetHeights to change the terrain height.
+            TerrainMain.terrainData.SetHeightsDelayLOD(left, bottom, shapeHeights);
+            TerrainMain.terrainData.SyncHeightmap();
+        }
+    }
+
+    //Checks if the given vertex is inside the the shape.
+    bool InsidePolygon(Vector2 p, int terrainZmax)
+    {
+        // Assign the points that define the outline of the shape
+        Vector3[] positions = new Vector3[line.positionCount];
+        line.GetPositions(positions);
+
+        int count = 0;
+        Vector2 p1, p2;
+        int n = positions.Length;
+
+        // Find the lines that define the shape
+        for (int i = 0; i &lt; n; i++)
+        {
+            p1.y = positions[i].z;// - p.y;
+            p1.x = positions[i].x;// - p.x;
+            if (i != n - 1)
+            {
+                p2.y = positions[(i + 1)].z;// - p.y;
+                p2.x = positions[(i + 1)].x;// - p.x;
+            }
+            else
+            {
+                p2.y = positions[0].z;// - p.y;
+                p2.x = positions[0].x;// - p.x;
+            }
+
+            // check if the given point p intersects with the lines that form the outline of the shape.
+            if (LinesIntersect(p1, p2, p, terrainZmax))
+            {
+                count++;
+            }
+        }
+
+        // the point is inside the shape when the number of line intersections is an odd number
+        if (count % 2 == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    // Function that checks if two lines intersect with each other
+    bool LinesIntersect(Vector2 A, Vector2 B, Vector2 C, int terrainZmax)
+    {
+        Vector2 D = new Vector2(C.x, terrainZmax);
+        Vector2 CmP = new Vector2(C.x - A.x, C.y - A.y);
+        Vector2 r = new Vector2(B.x - A.x, B.y - A.y);
+        Vector2 s = new Vector2(D.x - C.x, D.y - C.y);
+
+        float CmPxr = CmP.x * r.y - CmP.y * r.x;
+        float CmPxs = CmP.x * s.y - CmP.y * s.x;
+        float rxs = r.x * s.y - r.y * s.x;
+
+        if (CmPxr == 0f)
+        {
+            // Lines are collinear, and so intersect if they have any overlap
+
+            return ((C.x - A.x &lt; 0f) != (C.x - B.x &lt; 0f))
+                || ((C.y - A.y &lt; 0f) != (C.y - B.y &lt; 0f));
+        }
+
+        if (rxs == 0f)
+            return false; // Lines are parallel.
+
+        float rxsr = 1f / rxs;
+        float t = CmPxs * rxsr;
+        float u = CmPxr * rxsr;
+
+        return (t &gt;= 0f) &amp;&amp; (t &lt;= 1f) &amp;&amp; (u &gt;= 0f) &amp;&amp; (u &lt;= 1f);
+    }
+
+}</code></pre>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-dark-grey">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <h3>FOOTER</h3>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+                <div class="w3-third">
+                    <h3>POPULAR TAGS</h3>
+                    <p>
+                        <a href="/"> <span class="w3-tag w3-black w3-margin-bottom">Travel.cs</span></a>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+        <div class="w3-black w3-center w3-padding-24">
+            Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+                hljs.initLineNumbersOnLoad();
+            });
+        });
+        
+        function create_zip() {
+            var content = zip.generate();
+            location.href = "data:application/zip;base64," + content;
+        }
+        var zip = new JSZip();
+        function addto_zip(name, value) {
+            zip.add(name, value);
+        }
+ const colors = [{"ChangeTerrainHeight_lineMarker.cs": "/Open World/scripts/Change Terrain Height_line Marker/ChangeTerrainHeight_lineMarker.cs"}
+];
+
+
+        $.each(colors, function () {
+            $.each(this, function (name, url) {
+                $.ajax({
+                    async: true,
+                    type: 'GET',
+                    url: `${url}`,
+                    success: function (data) {
+                        addto_zip(`${name}`, data)
+                    }
+                });
+            });
+        });
+       // create_zip();
+        
+        /*/ReplaceWithMethod/*/
+        function myFunction(btnele, elementid) {
+
+            var xbtn = document.getElementById(btnele);
+
+            var x = document.getElementById(elementid);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                xbtn.innerText = "Hide Content";
+            } else {
+                x.style.display = "none";
+                xbtn.innerText = "Show Content";
+            }
+        }
+
+        function ToggleIt(btneleindex, elementid) {
+            console.log("Here");
+            var i;
+            var coll = document.getElementsByClassName("content");
+
+            var x = document.getElementById(elementid);
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].style.display = "none";                   
+            }
+            x.style.display = "inline";
+        }
+
+
+        
+    </script>
+
+</body>
+
+</html>

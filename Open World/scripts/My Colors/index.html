@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title id="seotitle">Unity3D Open World Project -DevBeeBee</title>
+    <meta id="seokeys" name="keywords" content="Unity3D, Open World, Project">
+    <meta id="seodescription" name="description" content="">
+    <meta name=”robots” content="index, follow">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <link id="codeCSS" rel="stylesheet" href="/css/hybrid.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/my.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="/js/jszip.js"></script>
+    <script type="text/javascript" src="/js/jQuery.js"></script>
+    <script type="text/javascript" src="/js/savecs.js"></script>
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9754975194862641" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122930112-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122930112-1');
+    </script>
+    <style>
+        #spoilern {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+
+        #spoilerbtnn {
+            -webkit-text-size-adjust: 100%;
+            box-sizing: inherit;
+            font: inherit;
+
+            text-transform: none;
+            -webkit-appearance: button;
+            color: #fff !important;
+            background-color: #616161 !important;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            vertical-align: middle;
+            overflow: hidden;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            white-space: nowrap;
+            user-select: none;
+            box-shadow: none;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        pre {
+            width: 90%;
+            margin: 20px;
+            margin-left: 5%;
+            margin-top: 4px;
+            /* margin: -20px; */
+        }
+
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+            .active, .collapsible:hover {
+                background-color: #555;
+            }
+
+        .content {
+            display: none;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body class="w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-animate-left" style="background-color: #0b0b0b; z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+
+            <h4><b>DevBeeBee</b></h4>
+            <p class="w3-text-grey">A Place for all the thing's i have learned around coding.</p>
+        </div>
+        <div class="w3-bar-block">
+            <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">
+                <i class="fa fa-th-large fa-fw w3-margin-right"></i>Home
+            </a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding myNav">
+                <i class="fa fa-user fa-fw w3-margin-right"></i>C# & Unity
+            </a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding myNav">
+                <i class="fa fa-user fa-fw w3-margin-right"></i>HTML JS CSS
+            </a>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="devbeebee" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff"
+                data-coffee-color="#FFDD00"></script>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header id="portfolio">
+
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </span>
+            <div class="w3-container">
+                <h1 id="pagename" style="text-align: center;"><b>My Colors</b></h1>
+            </div>
+        </header>
+        
+        <h1>TITLE</h1>
+        <div id="mainscript">
+            <h4 style="text-align: center;" id="mainscriptname">MyColors.cs <sup >14KB</sup></h4>
+            <p style='text-align:center;'></p>
+            <button class='center'onclick='create_zip()'>Download Files 14KB</button><br>
+            <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using System.Collections.Generic;
+using UnityEngine;
+
+public static class MyColors
+{
+    public static Color ColorFromHexidecimal(string hex)
+    {
+        ColorUtility.TryParseHtmlString(hex, out Color c);
+        return c;
+    }
+    #region Random Color Methods
+    public static Color RandomBaseColor =&gt; Base.GetRandomColor();
+    public static Color RandomBoldColor =&gt; Bold.GetRandomColor();
+    public static Color RandomDarkColor =&gt; Dark.GetRandomColor();
+    public static Color RandomLightColor =&gt; Light.GetRandomColor();
+    public static Color RandomPastelColor =&gt; Pastel.GetRandomColor();
+    public static Color RandomZestyColor =&gt; Zesty.GetRandomColor();
+    public static Color GetRandomColor()
+    {
+        List&lt;Color&gt; Colours = new List&lt;Color&gt;();
+        Colours.AddRange(Base.GetColors());
+        Colours.AddRange(Bold.GetColors());
+        Colours.AddRange(Pastel.GetColors());
+        Colours.AddRange(Dark.GetColors());
+        Colours.AddRange(Light.GetColors());
+        Colours.AddRange(Zesty.GetColors());
+        return Colours.PickRandom();
+    }
+    #endregion
+    #region Color Classes
+    public static class Base
+    {
+        public static List&lt;Color&gt; GetColors()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                Black,
+                Red,
+                Green,
+                Yellow,
+                Blue,
+                Cyan,
+                Purple,
+                White,
+                Orange,
+                Gray,
+                Silver,
+                Darkgray,
+                Violet
+            };
+            return Colours;
+        }
+        public static Color GetRandomColor()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                Black,
+                Red,
+                Green,
+                Yellow,
+                Blue,
+                Cyan,
+                Purple,
+                White,
+                Orange,
+                Gray,
+                Silver,
+                Darkgray,
+                Violet
+            };
+            return Colours.PickRandom();
+        }
+        private readonly static Color black = new Color(0.00f, 0.00f, 0.00f, 1.00f);
+        private readonly static Color red = new Color(1.00f, 0.00f, 0.00f, 1.00f);
+        private readonly static Color green = new Color(0.00f, 1.00f, 0.00f, 1.00f);
+        private readonly static Color yellow = new Color(1.00f, 1.00f, 0.00f, 1.00f);
+        private readonly static Color blue = new Color(0.00f, 0.00f, 1.00f, 1.00f);
+        private readonly static Color cyan = new Color(0.00f, 1.00f, 1.00f, 1.00f);
+        private readonly static Color purple = new Color(1.00f, 0.00f, 1.00f, 1.00f);
+        private readonly static Color white = new Color(1.00f, 1.00f, 1.00f, 1.00f);
+        private readonly static Color orange = new Color(1.00f, 0.50f, 0.00f, 1.00f);
+        private readonly static Color gray = new Color(0.50f, 0.50f, 0.50f, 1.00f);
+        private readonly static Color silver = new Color(0.80f, 0.80f, 0.80f, 1.00f);
+        private readonly static Color darkgray = new Color(0.35f, 0.35f, 0.35f, 1.00f);
+        private readonly static Color violet = new Color(0.50f, 0.00f, 1.00f, 1.00f);
+
+        public static Color Black =&gt; black;
+        public static Color Red =&gt; red;
+        public static Color Green =&gt; green;
+        public static Color Yellow =&gt; yellow;
+        public static Color Blue =&gt; blue;
+        public static Color Cyan =&gt; cyan;
+        public static Color Purple =&gt; purple;
+        public static Color White =&gt; white;
+        public static Color Orange =&gt; orange;
+        public static Color Gray =&gt; gray;
+        public static Color Silver =&gt; silver;
+        public static Color Darkgray =&gt; darkgray;
+        public static Color Violet =&gt; violet;
+    }
+    public static class Pastel
+    {
+        public static List&lt;Color&gt; GetColors()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                red_chestnut,
+                green_meadow,
+                blue_steel,
+                yellow_celery ,
+                orange_twine ,
+                purple_amethyst,
+                cyan_fountain
+            };
+            return Colours;
+        }
+        public static Color GetRandomColor()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                red_chestnut,
+                green_meadow,
+                blue_steel,
+                yellow_celery ,
+                orange_twine ,
+                purple_amethyst,
+                cyan_fountain
+            };
+            return Colours.PickRandom();
+        }
+        private readonly static Color red_chestnut = new Color(0.72f, 0.32f, 0.32f, 1.00f);
+        private readonly static Color green_meadow = new Color(0.32f, 0.72f, 0.42f, 1.00f);
+        private readonly static Color blue_steel = new Color(0.32f, 0.42f, 0.72f, 1.00f);
+        private readonly static Color yellow_celery = new Color(0.72f, 0.72f, 0.32f, 1.00f);
+        private readonly static Color orange_twine = new Color(0.72f, 0.56f, 0.32f, 1.00f);
+        private readonly static Color purple_amethyst = new Color(0.72f, 0.32f, 0.72f, 1.00f);
+        private readonly static Color cyan_fountain = new Color(0.32f, 0.72f, 0.56f, 1.00f);
+
+        public static Color Red_chestnut =&gt; red_chestnut;
+        public static Color Green_meadow =&gt; green_meadow;
+        public static Color Blue_steel =&gt; blue_steel;
+        public static Color Yellow_celery =&gt; yellow_celery;
+        public static Color Orange_twine =&gt; orange_twine;
+        public static Color Purple_amethyst =&gt; purple_amethyst;
+        public static Color Cyan_fountain =&gt; cyan_fountain;
+    }
+    public static class Dark
+    {
+        public static List&lt;Color&gt; GetColors()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+               darkred_maroon,
+               darkgreen_laurel,
+               darkblue_navy,
+               darkyellow_olive,
+               darkorange_cinnamon,
+               darkpurple_indigo,
+               darkcyan_deapsea
+            };
+            return Colours;
+        }
+        public static Color GetRandomColor()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                darkred_maroon,
+                darkgreen_laurel,
+                darkblue_navy ,
+                darkyellow_olive,
+                darkorange_cinnamon ,
+                darkpurple_indigo ,
+                darkcyan_deapsea
+            };
+            return Colours.PickRandom();
+        }
+        private readonly static Color darkred_maroon = new Color(0.50f, 0.00f, 0.00f, 1.00f);
+        private readonly static Color darkgreen_laurel = new Color(0.00f, 0.50f, 0.00f, 1.00f);
+        private readonly static Color darkblue_navy = new Color(0.00f, 0.00f, 0.50f, 1.00f);
+        private readonly static Color darkyellow_olive = new Color(0.50f, 0.50f, 0.00f, 1.00f);
+        private readonly static Color darkorange_cinnamon = new Color(0.50f, 0.25f, 0.00f, 1.00f);
+        private readonly static Color darkpurple_indigo = new Color(0.25f, 0.00f, 0.50f, 1.00f);
+        private readonly static Color darkcyan_deapsea = new Color(0.00f, 0.50f, 0.50f, 1.00f);
+
+        public static Color Darkred_maroon =&gt; darkred_maroon;
+        public static Color Darkgreen_laurel =&gt; darkgreen_laurel;
+        public static Color Darkblue_navy =&gt; darkblue_navy;
+        public static Color Darkyellow_olive =&gt; darkyellow_olive;
+        public static Color Darkorange_cinnamon =&gt; darkorange_cinnamon;
+        public static Color Darkpurple_indigo =&gt; darkpurple_indigo;
+        public static Color Darkcyan_deapsea =&gt; darkcyan_deapsea;
+    }
+    public static class Light
+    {
+        public static List&lt;Color&gt; GetColors()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                red_tangerine ,
+                green_mint ,
+                blue_malibu ,
+                yellow_dolly ,
+                orange_macncheese ,
+                purple_blush ,
+                cyan_anakiwa
+            };
+            return Colours;
+        }
+        public static Color GetRandomColor()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                red_tangerine ,
+                green_mint ,
+                blue_malibu ,
+                yellow_dolly ,
+                orange_macncheese ,
+                purple_blush ,
+                cyan_anakiwa
+            };
+            return Colours.PickRandom();
+        }
+        private readonly static Color red_tangerine = new Color(1.00f, 0.50f, 0.50f, 1.00f);
+        private readonly static Color green_mint = new Color(0.50f, 1.00f, 0.50f, 1.00f);
+        private readonly static Color blue_malibu = new Color(0.50f, 0.50f, 1.00f, 1.00f);
+        private readonly static Color yellow_dolly = new Color(1.00f, 1.00f, 0.50f, 1.00f);
+        private readonly static Color orange_macncheese = new Color(1.00f, 0.75f, 0.50f, 1.00f);
+        private readonly static Color purple_blush = new Color(1.00f, 0.50f, 1.00f, 1.00f);
+        private readonly static Color cyan_anakiwa = new Color(0.50f, 1.00f, 1.00f, 1.00f);
+
+        public static Color Red_tangerine =&gt; red_tangerine;
+        public static Color Green_mint =&gt; green_mint;
+        public static Color Blue_malibu =&gt; blue_malibu;
+        public static Color Yellow_dolly =&gt; yellow_dolly;
+        public static Color Orange_macncheese =&gt; orange_macncheese;
+        public static Color Purple_blush =&gt; purple_blush;
+        public static Color Cyan_anakiwa =&gt; cyan_anakiwa;
+    }
+    public static class Bold
+    {
+        public static List&lt;Color&gt; GetColors()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+         red_coral,
+         green_earthbound,
+         blue_dodger,
+         yellow_golden ,
+         orange_crusta,
+         purple_velectric,
+         cyan_aqua,
+         pink_strawberry
+            };
+            return Colours;
+        }
+        public static Color GetRandomColor()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                red_coral,
+                green_earthbound,
+                blue_dodger,
+                yellow_golden,
+                orange_crusta,
+                purple_velectric,
+                cyan_aqua,
+                pink_strawberry
+            };
+            return Colours.PickRandom();
+        }
+        private readonly static Color red_coral = new Color(1.00f, 0.25f, 0.25f, 1.00f);
+        private readonly static Color green_earthbound = new Color(0.25f, 1.00f, 0.50f, 1.00f);
+        private readonly static Color blue_dodger = new Color(0.25f, 0.50f, 1.00f, 1.00f);
+        private readonly static Color yellow_golden = new Color(1.00f, 1.00f, 0.25f, 1.00f);
+        private readonly static Color orange_crusta = new Color(1.00f, 0.50f, 0.25f, 1.00f);
+        private readonly static Color purple_velectric = new Color(0.50f, 0.25f, 1.00f, 1.00f);
+        private readonly static Color cyan_aqua = new Color(0.25f, 1.00f, 1.00f, 1.00f);
+        private readonly static Color pink_strawberry = new Color(1.00f, 0.25f, 0.50f, 1.00f);
+
+        public static Color Red_coral =&gt; red_coral;
+        public static Color Green_earthbound =&gt; green_earthbound;
+        public static Color Blue_dodger =&gt; blue_dodger;
+        public static Color Yellow_golden =&gt; yellow_golden;
+        public static Color Orange_crusta =&gt; orange_crusta;
+        public static Color Purple_velectric =&gt; purple_velectric;
+        public static Color Cyan_aqua =&gt; cyan_aqua;
+        public static Color Pink_strawberry =&gt; pink_strawberry;
+    }
+    public static class Zesty
+    {
+        public static List&lt;Color&gt; GetColors()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                zestyred_bittersweet,
+                zestygreen_screamin,
+                zestyblue_maya,
+                zestyyellow_lemon,
+                zestyorange_tainoi,
+                zestypurple_heliotrope ,
+                zestycyan_aquamarine ,
+                zestypink_neon
+            };
+            return Colours;
+        }
+        public static Color GetRandomColor()
+        {
+            List&lt;Color&gt; Colours = new List&lt;Color&gt;
+            {
+                zestyred_bittersweet,
+                zestygreen_screamin,
+                zestyblue_maya,
+                zestyyellow_lemon,
+                zestyorange_tainoi,
+                zestypurple_heliotrope ,
+                zestycyan_aquamarine ,
+                zestypink_neon
+            };
+            return Colours.PickRandom();
+        }
+        private readonly static Color zestyred_bittersweet = MyColors.ColorFromHexidecimal(&quot;#ff5b5b&quot;);
+        private readonly static Color zestygreen_screamin = MyColors.ColorFromHexidecimal(&quot;#91ff5b&quot;);
+        private readonly static Color zestyblue_maya = MyColors.ColorFromHexidecimal(&quot;#5bc3ff&quot;);
+        private readonly static Color zestyyellow_lemon = MyColors.ColorFromHexidecimal(&quot;#fffd5b&quot;);
+        private readonly static Color zestyorange_tainoi = MyColors.ColorFromHexidecimal(&quot;#ffbf5b&quot;);
+        private readonly static Color zestypurple_heliotrope = MyColors.ColorFromHexidecimal(&quot;#da5bff&quot;);
+        private readonly static Color zestycyan_aquamarine = MyColors.ColorFromHexidecimal(&quot;#5bffda&quot;);
+        private readonly static Color zestypink_neon = MyColors.ColorFromHexidecimal(&quot;#ff5bc3&quot;);
+
+        public static Color Zestyred_bittersweet =&gt; zestyred_bittersweet;
+        public static Color Zestygreen_screamin =&gt; zestygreen_screamin;
+        public static Color Zestyblue_maya =&gt; zestyblue_maya;
+        public static Color Zestyyellow_lemon =&gt; zestyyellow_lemon;
+        public static Color Zestyorange_tainoi =&gt; zestyorange_tainoi;
+        public static Color Zestypurple_heliotrope =&gt; zestypurple_heliotrope;
+        public static Color Zestycyan_aquamarine =&gt; zestycyan_aquamarine;
+        public static Color Zestypink_neon =&gt; zestypink_neon;
+    }
+    #endregion
+}</code></pre>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-dark-grey">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <h3>FOOTER</h3>
+                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                </div>
+                <div class="w3-third">
+                    <h3>POPULAR TAGS</h3>
+                    <p>
+                        <a href="/"> <span class="w3-tag w3-black w3-margin-bottom">Travel.cs</span></a>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span>
+                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+
+        <div class="w3-black w3-center w3-padding-24">
+            Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+                hljs.initLineNumbersOnLoad();
+            });
+        });
+        
+        function create_zip() {
+            var content = zip.generate();
+            location.href = "data:application/zip;base64," + content;
+        }
+        var zip = new JSZip();
+        function addto_zip(name, value) {
+            zip.add(name, value);
+        }
+ const colors = [{"MyColors.cs": "/Open World/scripts/My Colors/MyColors.cs"}
+];
+
+
+        $.each(colors, function () {
+            $.each(this, function (name, url) {
+                $.ajax({
+                    async: true,
+                    type: 'GET',
+                    url: `${url}`,
+                    success: function (data) {
+                        addto_zip(`${name}`, data)
+                    }
+                });
+            });
+        });
+       // create_zip();
+        
+        /*/ReplaceWithMethod/*/
+        function myFunction(btnele, elementid) {
+
+            var xbtn = document.getElementById(btnele);
+
+            var x = document.getElementById(elementid);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                xbtn.innerText = "Hide Content";
+            } else {
+                x.style.display = "none";
+                xbtn.innerText = "Show Content";
+            }
+        }
+
+        function ToggleIt(btneleindex, elementid) {
+            console.log("Here");
+            var i;
+            var coll = document.getElementsByClassName("content");
+
+            var x = document.getElementById(elementid);
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].style.display = "none";                   
+            }
+            x.style.display = "inline";
+        }
+
+
+        
+    </script>
+
+</body>
+
+</html>

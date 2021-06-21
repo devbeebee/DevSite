@@ -1,0 +1,6 @@
+[head3]How to make a Damagabled Object in Unity3D with C#[/head3]   
+[spoil(htchar)]
+[p]To make a Damagabled object simply add the following script and on the object in unity make sure the Game Object has a collider so that on Collision or Raycast
+hit you can simply call  GetComponent<ObjectDamageable>().TakeDamage(value) with value being the ammount of damage to take.    [/p]
+[ln(15)]
+[/spoil]

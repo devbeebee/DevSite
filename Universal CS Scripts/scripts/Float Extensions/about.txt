@@ -1,0 +1,3 @@
+[head3]How to work out a percentage with C#[/head3]   
+[p]The maths for working out a percentage is quite simple just divide the current number by the maximum and multiply by 100. [/p]
+[ln(7)]

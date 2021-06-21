@@ -1,0 +1,6 @@
+[head3]How to display a waypoint route with unity3D and C#[/head3]   
+[p]To display a waypoint route like a sat nav i use a the LineRenderer and give it an array of vector3's for the positions. Since i usethe LineRenderer
+on the inspector or via code there is a few changes to make the main setting to change is to change the Alignment to Transform Z and make sure use world 
+space is true/checked set the transform 
+euler angles to x 90 y 0 z 0. [/p]
+[lns(11)][lne(13)]
