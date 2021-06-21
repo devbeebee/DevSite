@@ -145,33 +145,32 @@
                 <i class="fa fa-bars"></i>
             </span>
             <div class="w3-container">
-                <h1 id="pagename" style="text-align: center;"><b>Collectable</b></h1>
+                <h1 id="pagename" style="text-align: center;"><b>List Extensions</b></h1>
             </div>
         </header>
         
-        <h1>TITLE</h1>
+        <h3>How Pick a random item from a List with C#</h3>   
+<p style='text-align: center;'></p>
+<pre ><code >public static T PickRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source)=&gt; source.PickRandom(1).Single();</code></pre>
+<h3>How Pick a random amount of item's from a List with C#</h3>   
+<p style='text-align: center;'></p>
+<pre ><code >public static IEnumerable&lt;T&gt; PickRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source, int count)=&gt; source.Shuffle().Take(count);</code></pre>
+<h3>How Shuffle a List with C#</h3>   
+<p style='text-align: center;'></p>
+<pre ><code >public static IEnumerable&lt;T&gt; Shuffle&lt;T&gt;(this IEnumerable&lt;T&gt; source)=&gt; source.OrderBy(x =&gt; Guid.NewGuid());</code></pre>
         <div id="mainscript">
-            <h4 style="text-align: center;" id="mainscriptname">Collectable.cs <sup >457B</sup></h4>
-            <p style='text-align:center;'>CollectableObject : 274B<br>Collectables : 4.6KB<br></p>
-            <button class='center'onclick='create_zip()'>Download Files 5.4KB</button><br>
-            <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using UnityEngine;
+            <h4 style="text-align: center;" id="mainscriptname">ListExtensions.cs <sup >450B</sup></h4>
+            <p style='text-align:center;'></p>
+            <button class='center'onclick='create_zip()'>Download Files 450B</button><br>
+            <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using System;
+using System.Collections.Generic;
+using System.Linq;
 
-public class Collectable : MonoBehaviour
+public static class ListExtensions
 {
-    public CollectableObject collectableData;
-    [SerializeField] bool collect;
-    private void Start()
-    {
-        Collectables.Instance.AddToMaster(collectableData,gameObject);
-    }
-    private void Update()
-    {
-        if (collect)
-        {
-            Collectables.Instance.AddFound(collectableData);
-            gameObject.SetActive(false);
-        }
-    }
+    public static T PickRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source)=&gt; source.PickRandom(1).Single();  
+    public static IEnumerable&lt;T&gt; PickRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source, int count)=&gt; source.Shuffle().Take(count);  
+    public static IEnumerable&lt;T&gt; Shuffle&lt;T&gt;(this IEnumerable&lt;T&gt; source)=&gt; source.OrderBy(x =&gt; Guid.NewGuid());  
 }
 </code></pre>
         </div>
@@ -242,9 +241,7 @@ public class Collectable : MonoBehaviour
         function addto_zip(name, value) {
             zip.add(name, value);
         }
- const colors = [{"Collectable.cs": "/Open World/scripts/Collectable/Collectable.cs"}
-,{"CollectableObject.cs": "/Open World/scripts/Collectable Object/CollectableObject.cs"}
-,{"Collectables.cs": "/Open World/scripts/Collectables/Collectables.cs"}
+ const colors = [{"ListExtensions.cs": "/Universal CS Scripts/scripts/List Extensions/ListExtensions.cs"}
 ];
 
 

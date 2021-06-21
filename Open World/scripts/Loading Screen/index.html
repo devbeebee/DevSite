@@ -145,35 +145,52 @@
                 <i class="fa fa-bars"></i>
             </span>
             <div class="w3-container">
-                <h1 id="pagename" style="text-align: center;"><b>Collectable</b></h1>
+                <h1 id="pagename" style="text-align: center;"><b>Loading Screen</b></h1>
             </div>
         </header>
         
         <h1>TITLE</h1>
         <div id="mainscript">
-            <h4 style="text-align: center;" id="mainscriptname">Collectable.cs <sup >457B</sup></h4>
-            <p style='text-align:center;'>CollectableObject : 274B<br>Collectables : 4.6KB<br></p>
-            <button class='center'onclick='create_zip()'>Download Files 5.4KB</button><br>
-            <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using UnityEngine;
+            <h4 style="text-align: center;" id="mainscriptname">LoadingScreen.cs <sup >1.1KB</sup></h4>
+            <p style='text-align:center;'>Singleton : 327B<br></p>
+            <button class='center'onclick='create_zip()'>Download Files 1.4KB</button><br>
+            <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+using TMPro;
 
-public class Collectable : MonoBehaviour
+public class LoadingScreen : Singleton&lt;LoadingScreen&gt;
 {
-    public CollectableObject collectableData;
-    [SerializeField] bool collect;
-    private void Start()
+    [SerializeField] TextMeshProUGUI LoadingSceneText;
+    public List&lt;UnityAction&gt; unityEvents = new List&lt;UnityAction&gt;();
+    public string a;
+    public string b;
+    protected override void Awake()
     {
-        Collectables.Instance.AddToMaster(collectableData,gameObject);
+        base.Awake();
+        unityEvents = new List&lt;UnityAction&gt;();
     }
-    private void Update()
+    public void Add(UnityAction unityEv)
     {
-        if (collect)
+        unityEvents.Add(unityEv);
+    }
+    IEnumerator Start()
+    {
+        for (int i = 0; i &lt; 10; i++)
         {
-            Collectables.Instance.AddFound(collectableData);
-            gameObject.SetActive(false);
+            LoadingSceneText .SetText($&quot;Gathering Jobs Please wait....{i+1} / 10 {((float)i+1).Percentage(10)}\nTotal Jobs : {unityEvents.Count}&quot;);
+            yield return new WaitForSeconds(1);
         }
+        for (int i = 0; i &lt; unityEvents.Count; i++)
+        {
+            unityEvents[i].Invoke(); 
+            yield return null;            
+        }
+        LoadingSceneText.SetText(&quot;Finished\nPress any Key to continue...&quot;);
+        unityEvents = new List&lt;UnityAction&gt;();
     }
-}
-</code></pre>
+}</code></pre>
         </div>
 
         <!-- Footer -->
@@ -242,9 +259,8 @@ public class Collectable : MonoBehaviour
         function addto_zip(name, value) {
             zip.add(name, value);
         }
- const colors = [{"Collectable.cs": "/Open World/scripts/Collectable/Collectable.cs"}
-,{"CollectableObject.cs": "/Open World/scripts/Collectable Object/CollectableObject.cs"}
-,{"Collectables.cs": "/Open World/scripts/Collectables/Collectables.cs"}
+ const colors = [{"LoadingScreen.cs": "/Open World/scripts/Loading Screen/LoadingScreen.cs"}
+,{"Singleton.cs": "/Open World/scripts/Singleton/Singleton.cs"}
 ];
 
 

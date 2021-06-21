@@ -152,15 +152,14 @@
         <h1>TITLE</h1>
         <div id="mainscript">
             <h4 style="text-align: center;" id="mainscriptname">Collectables.cs <sup >4.6KB</sup></h4>
-            <p style='text-align:center;'>Collectable : 457B<br>CollectableObject : 274B<br>Saveables : 1.2KB<br>Singleton : 327B<br></p>
-            <button class='center'onclick='create_zip()'>Download Files 6.8KB</button><br>
+            <p style='text-align:center;'>Collectable : 457B<br>CollectableObject : 274B<br>LoadingScreen : 1.1KB<br>Saveables : 1.2KB<br>Singleton : 327B<br></p>
+            <button class='center'onclick='create_zip()'>Download Files 8KB</button><br>
             <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-
-
-public enum CollectableTypes { OnTrigger,Shoot}
+public enum CollectableTypes { OnTrigger, Shoot }
 public class Collectables : Singleton&lt;Collectables&gt;
 {
     [System.Serializable]
@@ -168,7 +167,7 @@ public class Collectables : Singleton&lt;Collectables&gt;
     {
         public CollectableList(CollectableTypes colType)
         {
-             collectableType= colType;
+            collectableType = colType;
         }
         public CollectableTypes collectableType;
         public List&lt;string&gt; CollectablesMaster = new List&lt;string&gt;();
@@ -176,21 +175,20 @@ public class Collectables : Singleton&lt;Collectables&gt;
         public void AddToMaster(string collectableData) =&gt; CollectablesMaster.Add(collectableData);
         public void AddFound(string collectable) =&gt; CollectablesFound.Add(collectable);
     }
-
+    public string FilePath =&gt; Saveables.CollectablesJsonPath;
     public List&lt;GameObject&gt; CollectableGameObjects = new List&lt;GameObject&gt;();
     public CollectableList OnTriggerCollectables = new CollectableList(CollectableTypes.OnTrigger);
     public CollectableList ShootableCollectables = new CollectableList(CollectableTypes.Shoot);
     protected override void Awake() =&gt; base.Awake();
 
-    private IEnumerator Start()
+    private void Start()
     {
-        Debug.Log(Saveables.CollectablesJsonPath);
-        for (int i = 0; i &lt; 10; i++)
-        {
-            Debug.Log($&quot;{i} / 10 &quot;);
-            yield return new WaitForSeconds(1);
-        }
+        //Debug.Log(Saveables.CollectablesJsonPath);
+        LoadingScreen.Instance.Add(LoadCollectablesData);
+    }
 
+    private void LoadCollectablesData()
+    {
         CollectableList foundOnTrig = Saveables.LoadCollectables(CollectableTypes.OnTrigger);
         CollectableList foundOnShoot = Saveables.LoadCollectables(CollectableTypes.Shoot);
 
@@ -223,20 +221,20 @@ public class Collectables : Singleton&lt;Collectables&gt;
                 Destroy(CollectableGameObjects[i]);
             }
         }
-        CollectableGameObjects=null;
+        CollectableGameObjects = null;
     }
 
-    public void AddToMaster(CollectableObject collectableData ,GameObject collectableGameobject)   
+    public void AddToMaster(CollectableObject collectableData, GameObject collectableGameobject)
     {
         switch (collectableData.collectableType)
         {
-            case CollectableTypes.OnTrigger: OnTriggerCollectables.AddToMaster(collectableData.CollectableName);  break;
+            case CollectableTypes.OnTrigger: OnTriggerCollectables.AddToMaster(collectableData.CollectableName); break;
             case CollectableTypes.Shoot: ShootableCollectables.AddToMaster(collectableData.CollectableName); break;
         }
         CollectableGameObjects.Add(collectableGameobject);
     }
 
-    public void AddFound(CollectableObject collectableData) 
+    public void AddFound(CollectableObject collectableData)
     {
         switch (collectableData.collectableType)
         {
@@ -260,7 +258,7 @@ public class Collectables : Singleton&lt;Collectables&gt;
         int found = 0;
         found += OnTriggerCollectables.CollectablesFound.Count;
         found += ShootableCollectables.CollectablesFound.Count;
-        
+
         int total = 0;
         total += OnTriggerCollectables.CollectablesMaster.Count;
         total += ShootableCollectables.CollectablesMaster.Count;
@@ -341,6 +339,7 @@ public class Collectables : Singleton&lt;Collectables&gt;
  const colors = [{"Collectables.cs": "/Open World/scripts/Collectables/Collectables.cs"}
 ,{"Collectable.cs": "/Open World/scripts/Collectable/Collectable.cs"}
 ,{"CollectableObject.cs": "/Open World/scripts/Collectable Object/CollectableObject.cs"}
+,{"LoadingScreen.cs": "/Open World/scripts/Loading Screen/LoadingScreen.cs"}
 ,{"Saveables.cs": "/Open World/scripts/Saveables/Saveables.cs"}
 ,{"Singleton.cs": "/Open World/scripts/Singleton/Singleton.cs"}
 ];

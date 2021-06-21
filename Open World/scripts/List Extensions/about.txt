@@ -1,1 +1,3 @@
-<h1>TITLE</h1>
+[head3]How Pick a random item from a List with C#[/head3]   
+[p][/p]
+[ln(5)]

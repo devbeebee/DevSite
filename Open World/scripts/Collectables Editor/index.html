@@ -151,7 +151,7 @@
         
         
         <div id="mainscript">
-            <h4 style="text-align: center;" id="mainscriptname">Collectables Editor <sup >578B</sup></h4>
+            <h4 style="text-align: center;" id="mainscriptname">Collectables Editor <sup >729B</sup></h4>
             
             
             <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using UnityEditor;
@@ -168,6 +168,9 @@ class CollectablesEditor : Editor
         EditorGUILayout.LabelField($&quot;Shootable % found = {collectables.GetPercent(CollectableTypes.Shoot)}&quot;);
 
         EditorGUILayout.LabelField($&quot;Overall % found = {collectables.GetOverallPercent()}&quot;);
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField($&quot;Folder Location = {collectables.FilePath}&quot;);
 
     }
 }</code></pre>

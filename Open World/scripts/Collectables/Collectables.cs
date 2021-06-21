@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-
-
-public enum CollectableTypes { OnTrigger,Shoot}
+public enum CollectableTypes { OnTrigger, Shoot }
 public class Collectables : Singleton<Collectables>
 {
     [System.Serializable]
@@ -12,7 +11,7 @@ public class Collectables : Singleton<Collectables>
     {
         public CollectableList(CollectableTypes colType)
         {
-             collectableType= colType;
+            collectableType = colType;
         }
         public CollectableTypes collectableType;
         public List<string> CollectablesMaster = new List<string>();
@@ -20,21 +19,20 @@ public class Collectables : Singleton<Collectables>
         public void AddToMaster(string collectableData) => CollectablesMaster.Add(collectableData);
         public void AddFound(string collectable) => CollectablesFound.Add(collectable);
     }
-
+    public string FilePath => Saveables.CollectablesJsonPath;
     public List<GameObject> CollectableGameObjects = new List<GameObject>();
     public CollectableList OnTriggerCollectables = new CollectableList(CollectableTypes.OnTrigger);
     public CollectableList ShootableCollectables = new CollectableList(CollectableTypes.Shoot);
     protected override void Awake() => base.Awake();
 
-    private IEnumerator Start()
+    private void Start()
     {
-        Debug.Log(Saveables.CollectablesJsonPath);
-        for (int i = 0; i < 10; i++)
-        {
-            Debug.Log($"{i} / 10 ");
-            yield return new WaitForSeconds(1);
-        }
+        //Debug.Log(Saveables.CollectablesJsonPath);
+        LoadingScreen.Instance.Add(LoadCollectablesData);
+    }
 
+    private void LoadCollectablesData()
+    {
         CollectableList foundOnTrig = Saveables.LoadCollectables(CollectableTypes.OnTrigger);
         CollectableList foundOnShoot = Saveables.LoadCollectables(CollectableTypes.Shoot);
 
@@ -67,20 +65,20 @@ public class Collectables : Singleton<Collectables>
                 Destroy(CollectableGameObjects[i]);
             }
         }
-        CollectableGameObjects=null;
+        CollectableGameObjects = null;
     }
 
-    public void AddToMaster(CollectableObject collectableData ,GameObject collectableGameobject)   
+    public void AddToMaster(CollectableObject collectableData, GameObject collectableGameobject)
     {
         switch (collectableData.collectableType)
         {
-            case CollectableTypes.OnTrigger: OnTriggerCollectables.AddToMaster(collectableData.CollectableName);  break;
+            case CollectableTypes.OnTrigger: OnTriggerCollectables.AddToMaster(collectableData.CollectableName); break;
             case CollectableTypes.Shoot: ShootableCollectables.AddToMaster(collectableData.CollectableName); break;
         }
         CollectableGameObjects.Add(collectableGameobject);
     }
 
-    public void AddFound(CollectableObject collectableData) 
+    public void AddFound(CollectableObject collectableData)
     {
         switch (collectableData.collectableType)
         {
@@ -104,7 +102,7 @@ public class Collectables : Singleton<Collectables>
         int found = 0;
         found += OnTriggerCollectables.CollectablesFound.Count;
         found += ShootableCollectables.CollectablesFound.Count;
-        
+
         int total = 0;
         total += OnTriggerCollectables.CollectablesMaster.Count;
         total += ShootableCollectables.CollectablesMaster.Count;
