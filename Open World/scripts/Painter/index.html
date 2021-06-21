@@ -159,28 +159,28 @@ To paint an object / Texture in Unity3D first i use a Raycast to get the Raycast
 <p style='text-align: center;'>
 Now with the textureCoord witch is a Vector2 multiply the x by the texture width and the y by the texture height :
 </p>
-<pre ><code >pixelUV.x *= texture.width;
-pixelUV.y *= texture.height;
+<pre ><code >{
+for (int y = -size / 2; y < size / 2; y++)
 </code></pre>
 
 <p style='text-align: center;'>
 Now that the multipilcation is done use two for loops to run threw the width and height of the brush / ammount of pixels around the textureCoord.
 </p>
 
-<pre ><code >for (int x = -size / 2; x &lt; size / 2; x++)
-for (int y = -size / 2; y &lt; size / 2; y++)</code></pre>
+<pre ><code >texture.SetPixel((int)(pixelUV.x + x), (int)(pixelUV.y + y), colorPicker.colorPicked);
+}</code></pre>
 <p style='text-align: center;'>
 Then use texture.SetPixel() to color the pixels on the texture. 
 </p>
 
-<pre ><code >texture.SetPixel((int)(pixelUV.x + x), (int)(pixelUV.y + y), colorPicker.colorPicked);</code></pre>
+<pre ><code >texture.Apply();</code></pre>
 
 <p style='text-align: center;'>
 Finally once the two for loops are finished make sure to use texture.Apply() and now its just a case
 of setting the mainTexture on the Material that you are modifying. 
 </p>
 
-<pre ><code >texture.Apply();</code></pre>
+<pre ><code >Texture2D PaintCircleOutline(Vector2 pixelUV, int radious)</code></pre>
 <h3>How to paint a cirle outline onto  a Texture in Unity3D with C#</h3>   
 <p style='text-align: center;'>
 To paint an circle on a Texture in Unity3D the steps are the same.
@@ -192,11 +192,11 @@ To paint an Texture on a Texture in Unity3D the steps are the same like for pain
 to paint. and on setting the pixel also get the pixel from the texture.
 </p>
 
-<pre ><code >texture.SetPixel((int)(pixelUV.x + x), (int)(pixelUV.y + y), spriteTexture.GetPixel(mainX, mainY));</code></pre>
+}</code></pre>
         <div id="mainscript">
-            <h4 style="text-align: center;" id="mainscriptname">Painter.cs <sup >4.2KB</sup></h4>
+            <h4 style="text-align: center;" id="mainscriptname">Painter.cs <sup >4.1KB</sup></h4>
             <p style='text-align:center;'>ColorPicker : 988B<br>NewInput : 3.9KB<br></p>
-            <button class='center'onclick='create_zip()'>Download Files 9.1KB</button><br>
+            <button class='center'onclick='create_zip()'>Download Files 8.9KB</button><br>
             <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -253,6 +253,8 @@ public class Painter : MonoBehaviour
     private void HandleRaycastHit(RaycastHit hit)
     {
         Vector2 pixelUV = hit.textureCoord;
+        pixelUV.x *= texture.width;
+        pixelUV.y *= texture.height;
         switch (brush)
         {
             case PaintBrush.Pixel:
@@ -269,9 +271,6 @@ public class Painter : MonoBehaviour
 
     public Texture2D PaintTextureOnTextue(Vector2 pixelUV, Texture2D spriteTexture)
     {
-        pixelUV.x *= texture.width;
-        pixelUV.y *= texture.height;
-
         for (int x = -spriteTexture.width / 2; x &lt; spriteTexture.width / 2; x++)
         {
             for (int y = -spriteTexture.height / 2; y &lt; spriteTexture.height / 2; y++)
@@ -289,9 +288,6 @@ public class Painter : MonoBehaviour
     }
     Texture2D PaintPixel(Vector2 pixelUV, int size)
     {
-        pixelUV.x *= texture.width;
-        pixelUV.y *= texture.height;
-
         for (int x = -size / 2; x &lt; size / 2; x++)
         {
             for (int y = -size / 2; y &lt; size / 2; y++)
@@ -306,8 +302,7 @@ public class Painter : MonoBehaviour
 
     Texture2D PaintCircleOutline(Vector2 pixelUV, int radious)
     {
-        pixelUV.x *= texture.width;
-        pixelUV.y *= texture.height;
+        
 
         //center
         int cx = (int)pixelUV.x;

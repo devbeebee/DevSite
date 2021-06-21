@@ -6,10 +6,6 @@ using System.Diagnostics;
 
 public static class SaveTextureToFile
 {
-    public static string dirName = "Saved2D_Textures";
-    public static string fileName = "textToPng";
-
-
     public static void SaveTxt2D(this Texture2D savedTexture, string dirPath, string fileName)
     {
         if (!Directory.Exists(dirPath))
@@ -23,12 +19,4 @@ public static class SaveTextureToFile
     }
 
     static int DirCount(DirectoryInfo dir) => dir.GetFiles().Length;
-
-
-
-    public static string TimeSinceStart()
-    {
-        DateTime UtcNow = Process.GetCurrentProcess().StartTime.ToUniversalTime();
-        return $"{UtcNow.Hour}:{UtcNow.Minute}:{UtcNow.Second}";
-    }
 }

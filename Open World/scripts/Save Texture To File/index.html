@@ -151,9 +151,9 @@
         
         <h1>TITLE</h1>
         <div id="mainscript">
-            <h4 style="text-align: center;" id="mainscriptname">SaveTextureToFile.cs <sup >1KB</sup></h4>
+            <h4 style="text-align: center;" id="mainscriptname">SaveTextureToFile.cs <sup >721B</sup></h4>
             <p style='text-align:center;'></p>
-            <button class='center'onclick='create_zip()'>Download Files 1KB</button><br>
+            <button class='center'onclick='create_zip()'>Download Files 721B</button><br>
             <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using System.Collections;
 using System.IO;
 using System;
@@ -162,10 +162,6 @@ using System.Diagnostics;
 
 public static class SaveTextureToFile
 {
-    public static string dirName = &quot;Saved2D_Textures&quot;;
-    public static string fileName = &quot;textToPng&quot;;
-
-
     public static void SaveTxt2D(this Texture2D savedTexture, string dirPath, string fileName)
     {
         if (!Directory.Exists(dirPath))
@@ -179,14 +175,6 @@ public static class SaveTextureToFile
     }
 
     static int DirCount(DirectoryInfo dir) =&gt; dir.GetFiles().Length;
-
-
-
-    public static string TimeSinceStart()
-    {
-        DateTime UtcNow = Process.GetCurrentProcess().StartTime.ToUniversalTime();
-        return $&quot;{UtcNow.Hour}:{UtcNow.Minute}:{UtcNow.Second}&quot;;
-    }
 }
 </code></pre>
         </div>

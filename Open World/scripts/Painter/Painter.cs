@@ -54,6 +54,8 @@ public class Painter : MonoBehaviour
     private void HandleRaycastHit(RaycastHit hit)
     {
         Vector2 pixelUV = hit.textureCoord;
+        pixelUV.x *= texture.width;
+        pixelUV.y *= texture.height;
         switch (brush)
         {
             case PaintBrush.Pixel:
@@ -70,9 +72,6 @@ public class Painter : MonoBehaviour
 
     public Texture2D PaintTextureOnTextue(Vector2 pixelUV, Texture2D spriteTexture)
     {
-        pixelUV.x *= texture.width;
-        pixelUV.y *= texture.height;
-
         for (int x = -spriteTexture.width / 2; x < spriteTexture.width / 2; x++)
         {
             for (int y = -spriteTexture.height / 2; y < spriteTexture.height / 2; y++)
@@ -90,9 +89,6 @@ public class Painter : MonoBehaviour
     }
     Texture2D PaintPixel(Vector2 pixelUV, int size)
     {
-        pixelUV.x *= texture.width;
-        pixelUV.y *= texture.height;
-
         for (int x = -size / 2; x < size / 2; x++)
         {
             for (int y = -size / 2; y < size / 2; y++)
@@ -107,8 +103,7 @@ public class Painter : MonoBehaviour
 
     Texture2D PaintCircleOutline(Vector2 pixelUV, int radious)
     {
-        pixelUV.x *= texture.width;
-        pixelUV.y *= texture.height;
+        
 
         //center
         int cx = (int)pixelUV.x;
