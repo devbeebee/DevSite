@@ -4,6 +4,6 @@
 [head3]How Pick a random amount of item's from a List with C#[/head3]   
 [p][/p]
 [ln(8)]
-[head3]How Shuffle a List with C#[/head3]   
+[head3]How Shuffle a List with C# [/head3]   
 [p][/p]
 [ln(9)]
