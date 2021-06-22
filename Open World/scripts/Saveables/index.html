@@ -194,35 +194,21 @@ static class Saveables
         <!-- Footer -->
         <footer class="w3-container w3-padding-32 w3-dark-grey">
             <div class="w3-row-padding">
-                <div class="w3-third">
-                    <h3>FOOTER</h3>
-                    <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+                <div class="w3-half" style="width: 25%;">
+                    <h3 style="color: #a0cc1b !important;">Random Quote</h3>
+                    <p id="footer"></p>
                 </div>
-                <div class="w3-third">
-                    <h3>POPULAR TAGS</h3>
-                    <p>
-                        <a href="/"> <span class="w3-tag w3-black w3-margin-bottom">Travel.cs</span></a>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span>
-                        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+                <div class="w3-half" style="width: 75%;">
+                    <h3 style="color: #a0cc1b !important;">Popular Scripts</h3>
+                    <p id="elements">
+
                     </p>
                 </div>
 
             </div>
         </footer>
 
-        <div class="w3-black w3-center w3-padding-24">
+        <div class="w3-black w3-center">
             Powered by
             <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
         </div>
@@ -307,8 +293,26 @@ static class Saveables
             x.style.display = "inline";
         }
 
-
         
+ var messages =['\ Aim Assist','\ Async Operation Progress Example','\ Audio Manager','\ Base Item Scriptable','\ Base Npc Scriptable','\ Base Vehicle Scriptable','\ Base Vehicle Trailer Scriptable','\ Binoculars','\ Camera Extensions','\ Camera Raycaster','\ Car Controller','\ Change Terrain Height_line Marker','\ Character Customization Camera','\ Character Customization GUI','\ Collectable','\ Collectable Object','\ Collectables','\ Color Picker','\ Custom Tags','\ Custom Tag System','\ Experience','\ Explosive','\ Flash Light','\ Fuel Pump','\ Fuel Station','\ Fuel System','\ Game Manager','\ Game Object Extensions','\ Global Static Data','\ Grid Placement','\ Grid Placement Move Object','\ Interaction','\ Interaction Raycaster','\ Item','\ Line Renderer Route','\ List Extensions','\ Loading Screen','\ Minimap','\ Mirror Reflection','\ Modular Construction','\ My Colors','\ New Input','\ New Input Test','\ Nothing But Math','\ NPC','\ Object Damageable','\ Painter','\ Pause Game','\ PIDController','\ Player Camera','\ Player Manager','\ Raise Lower Terrain','\ Recalculate Bounds','\ Rotate Me','\ Saveables','\ Save Texture To File','\ Singleton','\ Singleton Dont Destroy On Load','\ Spawner','\ String Extensions','\ Target Object','\ Terrain Adjuster Runtime','\ Terrain Editorv2','\ Texture Scale','\ TMP_ Dropdown Extensions','\ Trailer Controller','\ Trailer Landing Gear','\ Transform Extensions','\ Vechile Fuel','\ Vehicle Controller','\ Vehicle Controller AI Control','\ Vehicle Door Controller','\ Vehicle Trailer Controller','\ Vehicle Wheel Layout','\ Visual Waypoint Route','\ Weapon Manager','\ Weapon Scriptable',]
+        function getMessage() {
+            return messages[Math.floor(Math.random() * messages.length)];
+        }
+        function RandomTagScripts() {
+            var rnd = Math.floor(Math.random() * 15) + 5;
+            for (i = 0; i < rnd; i++)
+            {
+                $("#elements").append(" <a href='#'><span class='w3-tag w3-grey w3-small w3-margin-bottom'>" + getMessage() + " </span></a>");
+            }
+        }
+        var quoutes = ["“It’s harder to read code than to write it.” — Joel Spolsky"
+            , "“Code never lies; comments sometimes do.” — Ron Jeffries","“There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.” — Leon Bambrick"]
+        function getQuoute() {
+            return quoutes[Math.floor(Math.random() * quoutes.length)];
+        }
+        $("#footer").append(" " + getQuoute() + " ");
+
+        RandomTagScripts();
     </script>
 
 </body>
