@@ -8,26 +8,35 @@ To paint an object / Texture in Unity3D first i use a Raycast to get the Raycast
 [p]
 Now with the textureCoord witch is a Vector2 multiply the x by the texture width and the y by the texture height :
 [/p]
-[lns(93)][lne(94)]
+[lns(57)][lne(58)]
 
 [p]
-Now that the multipilcation is done use two for loops to run threw the width and height of the brush / ammount of pixels around the textureCoord.
+Now after the multipilcation use two for loops to run threw the width and height of the brush / ammount of pixels around the textureCoord.
 [/p]
 
-[ln(96)]
-[ln(98)]
+[ln(92)]
+[ln(94)]
 [p]
 Then use texture.SetPixel() to color the pixels on the texture. 
 [/p]
 
-[ln(100)]
+[ln(96)]
 
 [p]
 Finally once the two for loops are finished make sure to use texture.Apply() and now its just a case
 of setting the mainTexture on the Material that you are modifying. 
 [/p]
 
-[ln(104)]
+[ln(100)]
+[p]Painting a pixel
+[/p]
+[ln(62)]
+[p]Painting a Texture On Texture
+[/p]
+[ln(65)]
+[p]Painting a circle outline
+[/p]
+[ln(68)]
 [head3]How to paint a cirle outline onto  a Texture in Unity3D with C#[/head3]   
 [p]
 To paint an circle on a Texture in Unity3D the steps are the same.
@@ -38,4 +47,4 @@ To paint an circle on a Texture in Unity3D the steps are the same.
 To paint an Texture on a Texture in Unity3D the steps are the same like for painting a pixel but this time instead of looping the brush size loop though the texture size you wish
 to paint. and on setting the pixel also get the pixel from the texture.
 [/p]
-[ln(84)]
+[ln(83)]

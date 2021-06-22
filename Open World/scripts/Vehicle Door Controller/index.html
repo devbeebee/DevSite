@@ -49,7 +49,6 @@
             -webkit-text-size-adjust: 100%;
             box-sizing: inherit;
             font: inherit;
-
             text-transform: none;
             -webkit-appearance: button;
             color: #fff !important;
@@ -65,7 +64,6 @@
             white-space: nowrap;
             user-select: none;
             box-shadow: none;
-
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -100,7 +98,6 @@
             display: none;
             overflow: hidden;
         }
-
     </style>
 </head>
 
@@ -130,6 +127,11 @@
         </div>
         <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="devbeebee" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff"
                 data-coffee-color="#FFDD00"></script>
+
+
+        <a href="https://www.freecounterstat.com" title="website hit counter" style="    position: fixed;    bottom: 0;    width: 100%;    margin-left: 20px;">
+        <img src="https://counter6.stat.ovh/private/freecounterstat.php?c=fynr9qpz5uhlxysfjq5br52sha45xyue" border="0" title="website hit counter" alt="website hit counter">
+        </a>
     </nav>
 
     <!-- Overlay effect when opening sidebar on small screens -->
@@ -232,7 +234,7 @@ public class VehicleDoorController : MonoBehaviour
                 hljs.initLineNumbersOnLoad();
             });
         });
-        
+
         function create_zip() {
             var content = zip.generate();
             location.href = "data:application/zip;base64," + content;
@@ -241,40 +243,40 @@ public class VehicleDoorController : MonoBehaviour
         function addto_zip(name, value) {
             zip.add(name, value);
         }
- const colors = [{"VehicleDoorController.cs": "/Open World/scripts/Vehicle Door Controller/VehicleDoorController.cs"}
+     const colors = [{"VehicleDoorController.cs": "/Open World/scripts/Vehicle Door Controller/VehicleDoorController.cs"}
 ,{"NewInput.cs": "/Open World/scripts/New Input/NewInput.cs"}
 ,{"VehicleController.cs": "/Open World/scripts/Vehicle Controller/VehicleController.cs"}
 ];
 
 
-        $.each(colors, function () {
-            $.each(this, function (name, url) {
-                $.ajax({
-                    async: true,
-                    type: 'GET',
-                    url: `${url}`,
-                    success: function (data) {
-                        addto_zip(`${name}`, data)
-                    }
+            $.each(colors, function () {
+                $.each(this, function (name, url) {
+                    $.ajax({
+                        async: true,
+                        type: 'GET',
+                        url: `${url}`,
+                        success: function (data) {
+                            addto_zip(`${name}`, data)
+                        }
+                    });
                 });
             });
-        });
-       // create_zip();
-        
-        /*/ReplaceWithMethod/*/
-        function myFunction(btnele, elementid) {
+           // create_zip();
+            
+            /*/ReplaceWithMethod/*/
+            function myFunction(btnele, elementid) {
 
-            var xbtn = document.getElementById(btnele);
+                var xbtn = document.getElementById(btnele);
 
-            var x = document.getElementById(elementid);
-            if (x.style.display === "none") {
-                x.style.display = "block";
-                xbtn.innerText = "Hide Content";
-            } else {
-                x.style.display = "none";
-                xbtn.innerText = "Show Content";
+                var x = document.getElementById(elementid);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                    xbtn.innerText = "Hide Content";
+                } else {
+                    x.style.display = "none";
+                    xbtn.innerText = "Show Content";
+                }
             }
-        }
 
         function ToggleIt(btneleindex, elementid) {
             console.log("Here");
@@ -284,20 +286,19 @@ public class VehicleDoorController : MonoBehaviour
             var x = document.getElementById(elementid);
 
             for (i = 0; i < coll.length; i++) {
-                coll[i].style.display = "none";                   
+                coll[i].style.display = "none";
             }
             x.style.display = "inline";
         }
 
-        
- var messages =['\ Aim Assist','\ Async Operation Progress Example','\ Audio Manager','\ Base Item Scriptable','\ Base Npc Scriptable','\ Base Vehicle Scriptable','\ Base Vehicle Trailer Scriptable','\ Binoculars','\ Camera Extensions','\ Camera Raycaster','\ Car Controller','\ Change Terrain Height_line Marker','\ Character Customization Camera','\ Character Customization GUI','\ Collectable','\ Collectable Object','\ Collectables','\ Color Picker','\ Custom Tags','\ Custom Tag System','\ Experience','\ Explosive','\ Flash Light','\ Fuel Pump','\ Fuel Station','\ Fuel System','\ Game Manager','\ Game Object Extensions','\ Global Static Data','\ Grid Placement','\ Grid Placement Move Object','\ Interaction','\ Interaction Raycaster','\ Item','\ Line Renderer Route','\ List Extensions','\ Loading Screen','\ Minimap','\ Mirror Reflection','\ Modular Construction','\ My Colors','\ New Input','\ New Input Test','\ Nothing But Math','\ NPC','\ Object Damageable','\ Painter','\ Pause Game','\ PIDController','\ Player Camera','\ Player Manager','\ Raise Lower Terrain','\ Recalculate Bounds','\ Rotate Me','\ Saveables','\ Save Texture To File','\ Singleton','\ Singleton Dont Destroy On Load','\ Spawner','\ String Extensions','\ Target Object','\ Terrain Adjuster Runtime','\ Terrain Editorv2','\ Texture Scale','\ TMP_ Dropdown Extensions','\ Trailer Controller','\ Trailer Landing Gear','\ Transform Extensions','\ Vechile Fuel','\ Vehicle Controller','\ Vehicle Controller AI Control','\ Vehicle Door Controller','\ Vehicle Trailer Controller','\ Vehicle Wheel Layout','\ Visual Waypoint Route','\ Weapon Manager','\ Weapon Scriptable',]
-        function getMessage() {
-            return messages[Math.floor(Math.random() * messages.length)];
-        }
+
+     var messages =['\ Aim Assist','\ Async Operation Progress Example','\ Audio Manager','\ Base Item Scriptable','\ Base Npc Scriptable','\ Base Vehicle Scriptable','\ Base Vehicle Trailer Scriptable','\ Binoculars','\ Camera Extensions','\ Camera Raycaster','\ Car Controller','\ Change Terrain Height_line Marker','\ Character Customization Camera','\ Character Customization GUI','\ Collectable','\ Collectable Object','\ Collectables','\ Color Picker','\ Custom Tags','\ Custom Tag System','\ Experience','\ Explosive','\ Flash Light','\ Fuel Pump','\ Fuel Station','\ Fuel System','\ Game Manager','\ Game Object Extensions','\ Global Static Data','\ Grid Placement','\ Grid Placement Move Object','\ Interaction','\ Interaction Raycaster','\ Item','\ Line Renderer Route','\ List Extensions','\ Loading Screen','\ Minimap','\ Mirror Reflection','\ Modular Construction','\ My Colors','\ New Input','\ New Input Test','\ Nothing But Math','\ NPC','\ Object Damageable','\ Painter','\ Pause Game','\ PIDController','\ Player Camera','\ Player Manager','\ Raise Lower Terrain','\ Recalculate Bounds','\ Rotate Me','\ Saveables','\ Save Texture To File','\ Singleton','\ Singleton Dont Destroy On Load','\ Spawner','\ String Extensions','\ Target Object','\ Terrain Adjuster Runtime','\ Terrain Editorv2','\ Texture Scale','\ TMP_ Dropdown Extensions','\ Trailer Controller','\ Trailer Landing Gear','\ Transform Extensions','\ Vechile Fuel','\ Vehicle Controller','\ Vehicle Controller AI Control','\ Vehicle Door Controller','\ Vehicle Trailer Controller','\ Vehicle Wheel Layout','\ Visual Waypoint Route','\ Weapon Manager','\ Weapon Scriptable',]
+            function getMessage() {
+                return messages[Math.floor(Math.random() * messages.length)];
+            }
         function RandomTagScripts() {
             var rnd = Math.floor(Math.random() * 15) + 5;
-            for (i = 0; i < rnd; i++)
-            {
+            for (i = 0; i < rnd; i++) {
                 $("#elements").append(" <a href='#'><span class='w3-tag w3-grey w3-small w3-margin-bottom'>" + getMessage() + " </span></a>");
             }
         }
@@ -306,7 +307,10 @@ public class VehicleDoorController : MonoBehaviour
             "“Give a man a program, frustrate him for a day.Teach a man to program, frustrate him for a lifetime.” ― Muhammad Waseem",
             "“Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.” ― Max Kanat - Alexander",
             "“You Disingenuous Dense Motherfucker.” ― DarkViperAU", "“i am committed to push my branch to the master” ― Halgurd Hussein",
-            "“Web development is difficult, only then it is fun to do. You just have to set your standards. If it were to be easy, would anyone do it?” ― Olawale Daniel"]
+            "“Web development is difficult, only then it is fun to do. You just have to set your standards. If it were to be easy, would anyone do it?” ― Olawale Daniel",
+            "“Programming is learned by writing programs.” ― Brian Kernighan",
+            "“ Code is like humor. When you have to explain it, it’s bad.” – Cory House",
+            "“Whether you want to uncover the secrets of the universe, or you just want to pursue a career in the 21st century, basic computer programming is an essential skill to learn.” ― Stephen Hawking"]
         function getQuoute() {
             return quoutes[Math.floor(Math.random() * quoutes.length)];
         }
