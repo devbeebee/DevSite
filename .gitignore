@@ -1,4 +1,82 @@
-*/about.txt
-*.txt
-*/aboutproject.txt
-Open World/aboutproject.txt
+Universal CS Scripts/scripts/Float Extensions/about.txt
+Universal CS Scripts/scripts/Int Extensions/about.txt
+Universal CS Scripts/scripts/List Extensions/about.txt
+Universal CS Scripts/scripts/String Extensions/about.txt
+Open World/scripts/Aim Assist/about.txt
+Open World/scripts/Async Operation Progress Example/about.txt
+Open World/scripts/Audio Manager/about.txt
+Open World/scripts/Base Item Scriptable/about.txt
+Open World/scripts/Base Npc Scriptable/about.txt
+Open World/scripts/Base Vehicle Scriptable/about.txt
+Open World/scripts/Base Vehicle Trailer Scriptable/about.txt
+Open World/scripts/Binoculars/about.txt
+Open World/scripts/Camera Extensions/about.txt
+Open World/scripts/Camera Raycaster/about.txt
+Open World/scripts/Car Controller/about.txt
+Open World/scripts/Change Terrain Height_line Marker/about.txt
+Open World/scripts/Character Customization Camera/about.txt
+Open World/scripts/Character Customization GUI/about.txt
+Open World/scripts/Collectable/about.txt
+Open World/scripts/Collectable Object/about.txt
+Open World/scripts/Collectables/about.txt
+Open World/scripts/Color Picker/about.txt
+Open World/scripts/Custom Tags/about.txt
+Open World/scripts/Custom Tag System/about.txt
+Open World/scripts/Experience/about.txt
+Open World/scripts/Explosive/about.txt
+Open World/scripts/Flash Light/about.txt
+Open World/scripts/Fuel Pump/about.txt
+Open World/scripts/Fuel Station/about.txt
+Open World/scripts/Fuel System/about.txt
+Open World/scripts/Game Manager/about.txt
+Open World/scripts/Game Object Extensions/about.txt
+Open World/scripts/Global Static Data/about.txt
+Open World/scripts/Grid Placement/about.txt
+Open World/scripts/Grid Placement Move Object/about.txt
+Open World/scripts/Interaction/about.txt
+Open World/scripts/Interaction Raycaster/about.txt
+Open World/scripts/Item/about.txt
+Open World/scripts/Line Renderer Route/about.txt
+Open World/scripts/List Extensions/about.txt
+Open World/scripts/Loading Screen/about.txt
+Open World/scripts/Minimap/about.txt
+Open World/scripts/Mirror Reflection/about.txt
+Open World/scripts/Modular Construction/about.txt
+Open World/scripts/My Colors/about.txt
+Open World/scripts/New Input/about.txt
+Open World/scripts/New Input Test/about.txt
+Open World/scripts/Nothing But Math/about.txt
+Open World/scripts/NPC/about.txt
+Open World/scripts/Object Damageable/about.txt
+Open World/scripts/Painter/about.txt
+Open World/scripts/Pause Game/about.txt
+Open World/scripts/PIDController/about.txt
+Open World/scripts/Player Camera/about.txt
+Open World/scripts/Player Manager/about.txt
+Open World/scripts/Raise Lower Terrain/about.txt
+Open World/scripts/Recalculate Bounds/about.txt
+Open World/scripts/Rotate Me/about.txt
+Open World/scripts/Saveables/about.txt
+Open World/scripts/Save Texture To File/about.txt
+Open World/scripts/Singleton/about.txt
+Open World/scripts/Singleton Dont Destroy On Load/about.txt
+Open World/scripts/Spawner/about.txt
+Open World/scripts/String Extensions/about.txt
+Open World/scripts/Target Object/about.txt
+Open World/scripts/Terrain Adjuster Runtime/about.txt
+Open World/scripts/Terrain Editorv2/about.txt
+Open World/scripts/Texture Scale/about.txt
+Open World/scripts/TMP_ Dropdown Extensions/about.txt
+Open World/scripts/Trailer Controller/about.txt
+Open World/scripts/Trailer Landing Gear/about.txt
+Open World/scripts/Transform Extensions/about.txt
+Open World/scripts/Vechile Fuel/about.txt
+Open World/scripts/Vehicle Controller/about.txt
+Open World/scripts/Vehicle Controller AI Control/about.txt
+Open World/scripts/Vehicle Door Controller/about.txt
+Open World/scripts/Vehicle Trailer Controller/about.txt
+Open World/scripts/Vehicle Wheel Layout/about.txt
+Open World/scripts/Visual Waypoint Route/about.txt
+Open World/scripts/Weapon Manager/about.txt
+Open World/scripts/Weapon Scriptable/about.txt
+ECS Factory/scripts/Object Spawner/about.txt

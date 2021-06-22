@@ -150,16 +150,15 @@
         </header>
         
         <p style='text-align: center;font-variant: small-caps;'><a href='/Open World/'>Open World</a> - <a href='/Open World/scripts'>Scripts</a> -  Singleton</p><h3>How to make a Singleton / Instance in Unity3D with C#</h3>   
-<div id="htchar">
+
 <p style='text-align: center;'>To make a Sigleton or Instanced class it just requires a file with jus seven lines as you will see below. The magic of the Singleton
 is all done with in this one line </p>
 <pre ><code >if (instance == null) { instance = GetComponent&lt;T&gt;(); }</code></pre>
-</div><button onclick="" class='center' id='htcharbtn'>Show Content</button>
 
         <div id="mainscript">
             <h4 style="text-align: center;" id="mainscriptname">Singleton.cs <sup >327B</sup></h4>
             <p style='text-align:center;'></p>
-            <button class='center'onclick='create_zip()'>Download Files 327B</button><br>
+            <button class='center'onclick='create_zip()'>Download File 327B</button><br>
             <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using UnityEngine;
 public class Singleton&lt;T&gt; : MonoBehaviour where T : MonoBehaviour
 {

@@ -1,6 +1,5 @@
 [head3]How to make a Singleton / Instance in Unity3D with C#[/head3]   
-[spoil(htchar)]
+
 [p]To make a Sigleton or Instanced class it just requires a file with jus seven lines as you will see below. The magic of the Singleton
 is all done with in this one line [/p]
 [ln(8)]
-[/spoil]

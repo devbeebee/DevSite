@@ -1,1 +1,8 @@
-<h1>TITLE</h1>
+[head3]How to make a loading screen in Unity3D with C#[/head3]   
+
+[p]
+To make a loading screen in Unity3D all i do is take Events that require data to be loaded and add the event to a list. Once all events are added 
+with the data gathered i can easily make a progress bar and or display current task. 
+[/p]
+
+[ln(26)]

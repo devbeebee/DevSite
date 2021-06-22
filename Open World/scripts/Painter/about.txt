@@ -38,5 +38,4 @@ To paint an circle on a Texture in Unity3D the steps are the same.
 To paint an Texture on a Texture in Unity3D the steps are the same like for painting a pixel but this time instead of looping the brush size loop though the texture size you wish
 to paint. and on setting the pixel also get the pixel from the texture.
 [/p]
-
 [ln(84)]

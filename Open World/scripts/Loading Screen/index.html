@@ -149,11 +149,18 @@
             </div>
         </header>
         
-        <p style='text-align: center;font-variant: small-caps;'><a href='/Open World/'>Open World</a> - <a href='/Open World/scripts'>Scripts</a> -  Loading Screen</p><h1>TITLE</h1>
+        <p style='text-align: center;font-variant: small-caps;'><a href='/Open World/'>Open World</a> - <a href='/Open World/scripts'>Scripts</a> -  Loading Screen</p><h3>How to make a loading screen in Unity3D with C#</h3>   
+
+<p style='text-align: center;'>
+To make a loading screen in Unity3D all i do is take Events that require data to be loaded and add the event to a list. Once all events are added 
+with the data gathered i can easily make a progress bar and or display current task. 
+</p>
+
+<pre ><code >LoadingSceneText .SetText($&quot;Gathering Jobs Please wait....{i+1} / 10 {((float)i+1).Percentage(10)}\nTotal Jobs : {unityEvents.Count}&quot;);</code></pre>
         <div id="mainscript">
             <h4 style="text-align: center;" id="mainscriptname">LoadingScreen.cs <sup >1.1KB</sup></h4>
             <p style='text-align:center;'><p style='text-align:center;'><a href='/Open World/scripts/Singleton'>Singleton</a> <sup >327B</sup></p></p>
-            <button class='center'onclick='create_zip()'>Download Files 1.4KB</button><br>
+            <button class='center'onclick='create_zip()'>Download (2) Files 1.4KB</button><br>
             <pre ><code style='font-size: 12px;'class='language-csharp hljs'id='mainscriptcode'>using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
