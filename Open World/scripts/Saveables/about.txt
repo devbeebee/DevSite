@@ -3,11 +3,11 @@
 To Serialize and Deserialize an Object unity has made this really simple by using the JsonUtility class. 
 So now once a class has the Serializable Attribute it's just a case of calling JsonUtility ToJson and pass in an object to serialize.
  [/p]
-[ln(16)]
+[ln(18)]
 [p]
 Now to deserialize the data back you just need to call JsonUtility FromJson give it the tpye and the json string. 
 [/p]
-[ln(15)]
+[ln(17)]
 
 
 

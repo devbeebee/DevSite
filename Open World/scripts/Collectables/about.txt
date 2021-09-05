@@ -1,1 +1,8 @@
-<h1>TITLE</h1>
+[head3]How to make a collectables in Unity3D with C#[/head3]   
+
+[p]
+To make a collectable system what i do is use a scriptable object for the collectable 
+details.The main detail is a unique name as i save list's of string's forall the collectables found.  
+[/p]
+
+[ln(85)]

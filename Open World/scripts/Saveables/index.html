@@ -127,11 +127,6 @@
         </div>
         <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="devbeebee" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff"
                 data-coffee-color="#FFDD00"></script>
-
-
-        <a href="https://www.freecounterstat.com" title="website hit counter" style="    position: fixed;    bottom: 0;    width: 100%;    margin-left: 20px;">
-        <img src="https://counter6.stat.ovh/private/freecounterstat.php?c=fynr9qpz5uhlxysfjq5br52sha45xyue" border="0" title="website hit counter" alt="website hit counter">
-        </a>
     </nav>
 
     <!-- Overlay effect when opening sidebar on small screens -->
@@ -156,11 +151,11 @@
 To Serialize and Deserialize an Object unity has made this really simple by using the JsonUtility class. 
 So now once a class has the Serializable Attribute it's just a case of calling JsonUtility ToJson and pass in an object to serialize.
  </p>
-<pre ><code >public static string ExperienceJsonPath =&gt; $&quot;{GlobalStaticData.DocumentsDirWithAppName}/PlayerExp.json&quot;;</code></pre>
+<pre ><code >public static void SaveExperience(this Experience exp) =&gt; File.WriteAllText(ExperienceJsonPath, JsonUtility.ToJson(exp));</code></pre>
 <p style='text-align: center;'>
 Now to deserialize the data back you just need to call JsonUtility FromJson give it the tpye and the json string. 
 </p>
-<pre ><code >#region Experience</code></pre>
+<pre ><code >public static Experience LoadExp() =&gt; File.Exists(ExperienceJsonPath) ? JsonUtility.FromJson&lt;Experience&gt;(File.ReadAllText(ExperienceJsonPath)) : new Experience();</code></pre>
 
 
 
@@ -196,11 +191,11 @@ static class Saveables
         <!-- Footer -->
         <footer class="w3-container w3-padding-32 w3-dark-grey">
             <div class="w3-row-padding">
-                <div class="w3-half" style="width: 25%;">
+                <div class="w3-half" >
                     <h3 style="color: #a0cc1b !important;">Random Quote</h3>
                     <p id="footer"></p>
                 </div>
-                <div class="w3-half" style="width: 75%;">
+                <div class="w3-half" >
                     <h3 style="color: #a0cc1b !important;">Popular Scripts</h3>
                     <p id="elements">
 
